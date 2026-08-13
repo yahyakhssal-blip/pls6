@@ -1,0 +1,1 @@
+const {SlashCommandBuilder}=require("discord.js");module.exports={data:new SlashCommandBuilder().setName("userinfo").setDescription("معلومات عضو").addUserOption(o=>o.setName("user").setDescription("العضو")),async execute(i){let u=i.options.getUser("user")||i.user;await i.reply(`👤 **${u.tag}**\n🆔 ${u.id}`)}};

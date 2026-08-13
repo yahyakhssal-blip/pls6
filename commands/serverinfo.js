@@ -1,0 +1,1 @@
+const {SlashCommandBuilder}=require("discord.js");module.exports={data:new SlashCommandBuilder().setName("serverinfo").setDescription("معلومات السيرفر"),async execute(i){await i.reply(`📊 **${i.guild.name}**\n👥 الأعضاء: ${i.guild.memberCount}\n🆔 ${i.guild.id}`)}};

@@ -1,0 +1,1 @@
+const {SlashCommandBuilder}=require("discord.js");module.exports={data:new SlashCommandBuilder().setName("balance").setDescription("الرصيد").addUserOption(o=>o.setName("user").setDescription("عضو")),async execute(i,c){const u=i.options.getUser("user")||i.user;await i.reply(`💰 ${u}: **${c.getBalance(u.id)} درهم**`)}};
